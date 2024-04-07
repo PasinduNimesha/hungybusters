@@ -28,10 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Logo(),
-            InputField(label: 'Username'),
-            InputField(label: 'Password'),
-            TransparentButton(text: "Forgot Password?"),
+            const Logo(),
+            const InputField(label: 'Username'),
+            const InputField(label: 'Password'),
+            const TransparentButton(text: "Forgot Password?"),
             MediumButton(
                 text: "Sign In",
                 onPressed: () {
