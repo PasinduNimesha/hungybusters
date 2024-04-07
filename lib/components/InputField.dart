@@ -15,7 +15,7 @@ class _InputFieldState extends State<InputField> {
       padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
       child: TextField(
         decoration: InputDecoration(
-          labelText: '${widget.label}',
+          labelText: widget.label,
           labelStyle: const TextStyle(
             color: Colors.red,
           ),
