@@ -18,9 +18,9 @@ class HomeScreen extends StatelessWidget {
       drawer: const SideDrawer(),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.08,
-            child: SearchBar(),
+            child: const SearchBar(),
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.25,
