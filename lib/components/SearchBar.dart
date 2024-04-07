@@ -10,10 +10,10 @@ class SearchBar extends StatelessWidget {
       child: Container(
         height: 10.0,
         width: 300.0,
-        child: TextField(
+        child: const TextField(
           decoration: InputDecoration(
             labelText: 'Search',
-            labelStyle: const TextStyle(
+            labelStyle: TextStyle(
               color: Colors.red,
             ),
           ),
