@@ -12,9 +12,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Container(
             alignment: Alignment.centerRight,
-            child: const Text('Good Morning, User!')),
+            child: const Text('Good Morning, User!')
+        ),
       ),
-      drawer: SideDrawer(),
+      drawer: const SideDrawer(),
       body: Column(
         children: [
           Container(
@@ -23,22 +24,22 @@ class HomeScreen extends StatelessWidget {
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.25,
-            color: Colors.blue, // Replace this with your content for the second part
-            child: Center(
+            color: Colors.blue,
+            child: const Center(
               child: Text('Second Part'),
             ),
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
-            color: Colors.green, // Replace this with your content for the third part
-            child: Center(
+            color: Colors.green,
+            child: const Center(
               child: Text('Third Part'),
             ),
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.2,
-            color: Colors.yellow, // Replace this with your content for the fourth part
-            child: Center(
+            color: Colors.yellow,
+            child: const Center(
               child: Text('Fourth Part'),
             ),
           ),
