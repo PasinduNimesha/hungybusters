@@ -14,6 +14,7 @@ class FoodCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        onTap: onPressed,
         leading: const Icon(Icons.fastfood),
         title: Title(name: name, rating: rating),
         subtitle: Text(description),

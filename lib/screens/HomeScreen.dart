@@ -5,6 +5,7 @@ import 'package:hungybusters/components/OfferWindow.dart';
 
 import '../components/CategoryIcon.dart';
 import '../components/SideDrawer.dart';
+import 'ItemDetailScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -55,7 +56,9 @@ class HomeScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  FoodCard(name: "Burger", price: 10.0, description: "This is a burger", rating: 3.5, onPressed: (){},),
+                  FoodCard(name: "Burger", price: 10.0, description: "This is a burger", rating: 3.5, onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ItemDetailScreen()));
+                  },),
                   FoodCard(name: "Pizza", price: 15.0, description: "This is a pizza", rating: 4.5, onPressed: (){},),
                   FoodCard(name: "Pasta", price: 12.0, description: "This is a pasta", rating: 4.0, onPressed: (){},),
                   FoodCard(name: "Salad", price: 8.0, description: "This is a salad", rating: 3.0, onPressed: (){},),
