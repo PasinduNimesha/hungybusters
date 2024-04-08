@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hungybusters/components/ItemImage.dart';
 
 class ItemDetailScreen extends StatelessWidget {
   const ItemDetailScreen({super.key});
@@ -7,16 +8,17 @@ class ItemDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Item Detail'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Item Detail Screen'),
-          ],
-        ),
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          const ItemImage(),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.35,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.blue,
+          ),
+
+        ],
       ),
     );
   }

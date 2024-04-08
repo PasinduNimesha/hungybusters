@@ -22,9 +22,7 @@ class HomeScreen extends StatelessWidget {
       drawer: const SideDrawer(),
       body: Column(
         children: [
-          Container(
-            child: const SearchBar(),
-          ),
+          const SearchBar(),
           Container(
             height: MediaQuery.of(context).size.height * 0.25,
             color: Colors.blue,
@@ -32,9 +30,9 @@ class HomeScreen extends StatelessWidget {
               child: Text('Second Part'),
             ),
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.1,
-            child: SingleChildScrollView(
+            child: const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -57,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   FoodCard(name: "Burger", price: 10.0, description: "This is a burger", rating: 3.5, onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ItemDetailScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ItemDetailScreen()));
                   },),
                   FoodCard(name: "Pizza", price: 15.0, description: "This is a pizza", rating: 4.5, onPressed: (){},),
                   FoodCard(name: "Pasta", price: 12.0, description: "This is a pasta", rating: 4.0, onPressed: (){},),
