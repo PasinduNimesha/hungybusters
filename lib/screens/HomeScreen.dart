@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hungybusters/components/FoodCard.dart';
 import 'package:hungybusters/components/OfferWindow.dart';
 
+import '../components/CategoryIcon.dart';
 import '../components/SideDrawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -32,9 +33,22 @@ class HomeScreen extends StatelessWidget {
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
-            color: Colors.green,
-            child: const Center(
-              child: Text('Third Part'),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                  CategoryIcon(),
+                ],
+              ),
             ),
           ),
           Expanded(
