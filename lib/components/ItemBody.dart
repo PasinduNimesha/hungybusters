@@ -33,7 +33,20 @@ class ItemBody extends StatelessWidget {
           Container(
               alignment: Alignment.centerLeft,
               child: Text(description)),
-          Rating(rating: rating)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Rating(rating: rating),
+              Text(
+                '\$ $price',
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
