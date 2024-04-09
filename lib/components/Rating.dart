@@ -20,7 +20,7 @@ class Rating extends StatelessWidget {
         Text(
             '$rating',
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 18,
             ),
         ),
       ],
