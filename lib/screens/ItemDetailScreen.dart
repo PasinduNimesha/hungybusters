@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hungybusters/components/ItemBody.dart';
 import 'package:hungybusters/components/ItemImage.dart';
 
 class ItemDetailScreen extends StatelessWidget {
@@ -12,11 +13,7 @@ class ItemDetailScreen extends StatelessWidget {
       body: Column(
         children: [
           const ItemImage(),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.35,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.blue,
-          ),
+          ItemBody(name: "Burger", price: 10.0, description: "This is a burger ", rating: 3.5),
 
         ],
       ),
