@@ -14,7 +14,6 @@ class ItemDetailScreen extends StatelessWidget {
         children: [
           const ItemImage(),
           ItemBody(name: "Burger", price: 10.0, description: "This is a burger ", rating: 3.5),
-
         ],
       ),
     );
