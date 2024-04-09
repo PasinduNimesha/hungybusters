@@ -11,28 +11,31 @@ class ItemBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-                name,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
-                ),
+    return Padding(
+      padding: const EdgeInsets.all(18.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                  name,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
+                  ),
 
-            ),
-            Icon(Icons.favorite),
-          ],
-        ),
-        Container(
-            alignment: Alignment.centerLeft,
-            child: Text(description)),
-        Rating(rating: rating)
-      ],
+              ),
+              Icon(Icons.favorite),
+            ],
+          ),
+          Container(
+              alignment: Alignment.centerLeft,
+              child: Text(description)),
+          Rating(rating: rating)
+        ],
+      ),
     );
   }
 }
