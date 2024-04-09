@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
+import 'Rating.dart';
+
 class FoodCard extends StatelessWidget {
   final String name;
   final String description;
@@ -40,19 +42,12 @@ class Title extends StatelessWidget {
           ],
         ),
         //display the stars
-        Row(
-          children: [
-            for (var i = 0; i < 5; i++)
-              Icon(
-                i < rating ? Icons.star : Icons.star_border,
-                color: Colors.red,
-              ),
-            Text('$rating'),
-          ],
-        ),
+        Rating(rating: rating),
 
       ],
     );
   }
 }
+
+
 
