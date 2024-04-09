@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hungybusters/components/FoodCard.dart';
 import 'package:hungybusters/components/OfferWindow.dart';
 
+import '../components/BottomNavBar.dart';
 import '../components/CategoryIcon.dart';
 import '../components/SideDrawer.dart';
 import 'ItemDetailScreen.dart';
@@ -66,7 +67,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBar(destinations: [],)
+      bottomNavigationBar: BottomNavBar(),
     );
 
   }

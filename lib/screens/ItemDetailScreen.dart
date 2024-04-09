@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hungybusters/components/ItemBody.dart';
 import 'package:hungybusters/components/ItemImage.dart';
 
+import '../components/BottomNavBar.dart';
+
 class ItemDetailScreen extends StatelessWidget {
   const ItemDetailScreen({super.key});
 
@@ -10,6 +12,7 @@ class ItemDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      bottomNavigationBar: BottomNavBar(),
       body: Column(
         children: [
           const ItemImage(),
