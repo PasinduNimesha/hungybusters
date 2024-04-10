@@ -22,9 +22,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      items: const <BottomNavigationBarItem>[
+      selectedIconTheme: IconThemeData(color: Colors.black),
+      unselectedIconTheme: IconThemeData(color: Colors.red),
+
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.home_outlined),
           label: 'Home',
         ),
         BottomNavigationBarItem(
@@ -32,11 +35,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
           label: 'Location',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
+          icon: Icon(Icons.shopping_cart_outlined),
           label: 'Checkout',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
+          icon: Icon(Icons.person_outline),
           label: 'Profile',
         ),
       ],
