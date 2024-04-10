@@ -14,7 +14,6 @@ class CheckoutScreen extends StatelessWidget {
           Text('Order Summary'),
         ],
       ),
-      bottomNavigationBar: BottomNavBar(currentIndex: 2,),
     );
   }
 }

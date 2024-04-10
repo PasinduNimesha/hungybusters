@@ -5,25 +5,35 @@ import 'CheckoutScreen.dart';
 import 'HomeScreen.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int currentIndex = 0;
+  int _currentIndex = 0;
   final List<Widget> _children = [
     const HomeScreen(),
     const CheckoutScreen(),
-    const Placeholder(),
+    const CheckoutScreen(),
+    const CheckoutScreen()
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: _children[currentIndex],
-      bottomNavigationBar: BottomNavBar(currentIndex: 0,),
+      body: _children[_currentIndex],
+      bottomNavigationBar: BottomNavBar(
+        currentIndex: _currentIndex,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }
+
+

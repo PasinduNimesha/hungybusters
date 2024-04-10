@@ -1,39 +1,27 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hungybusters/screens/CheckoutScreen.dart';
-import 'package:hungybusters/screens/HomeScreen.dart';
 
-class BottomNavBar extends StatefulWidget {
+class BottomNavBar extends StatelessWidget {
   final int currentIndex;
+  final ValueChanged<int> onTap;
+
   const BottomNavBar({
-    super.key,
     required this.currentIndex,
-  });
+    required this.onTap,
+    Key? key,
+  }) : super(key: key);
 
-  @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
-}
-
-class _BottomNavBarState extends State<BottomNavBar> {
-  int currentIndex = 0;
-  final List<Widget> _children = [
-    const HomeScreen(),
-    const CheckoutScreen(),
-    const CheckoutScreen(),
-    const CheckoutScreen(),
-  ];
   @override
   Widget build(BuildContext context) {
-    currentIndex = widget.currentIndex;
     return BottomNavigationBar(
-      selectedIconTheme: IconThemeData(color: Colors.black),
-      unselectedIconTheme: IconThemeData(color: Colors.red),
-      onTap: (int index) {
-        Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => _children[index]));
-      },
+      selectedIconTheme: const IconThemeData(color: Colors.black),
+      unselectedIconTheme: const IconThemeData(color: Colors.red),
+      selectedLabelStyle: const TextStyle(color: Colors.black),
+      unselectedLabelStyle: const TextStyle(color: Colors.red),
+      backgroundColor: Colors.white,
       currentIndex: currentIndex,
-      items: [
+      onTap: onTap,
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined),
           label: 'Home',

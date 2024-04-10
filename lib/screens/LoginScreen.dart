@@ -4,6 +4,7 @@ import 'package:hungybusters/components/Logo.dart';
 import 'package:hungybusters/components/InputField.dart';
 import 'package:hungybusters/components/MediumButton.dart';
 import 'package:hungybusters/components/TransparentButton.dart';
+import 'package:hungybusters/screens/MainScreen.dart';
 
 import 'HomeScreen.dart';
 
@@ -37,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const HomeScreen())
+                      MaterialPageRoute(builder: (context) => const MainScreen())
                   );
                 }),
           ],
