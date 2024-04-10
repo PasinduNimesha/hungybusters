@@ -19,10 +19,10 @@ class CartItemCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        children: const [
+      child: const Row(
+        children: [
           Icon(
-            CupertinoIcons.delete,
+            Icons.delete,
             color: Colors.red,
           ),
           Text('Burger'),
