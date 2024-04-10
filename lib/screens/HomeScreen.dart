@@ -47,6 +47,7 @@ class HomeScreen extends StatelessWidget {
                   CategoryIcon(),
                   CategoryIcon(),
                   CategoryIcon(),
+                  CategoryIcon(),
                 ],
               ),
             ),
