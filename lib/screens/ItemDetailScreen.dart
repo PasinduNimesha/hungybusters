@@ -12,7 +12,7 @@ class ItemDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0,),
       body: Column(
         children: [
           const ItemImage(),

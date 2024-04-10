@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: _children[currentIndex],
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0,),
     );
   }
 }

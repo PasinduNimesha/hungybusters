@@ -3,8 +3,10 @@ import 'package:hungybusters/screens/CheckoutScreen.dart';
 import 'package:hungybusters/screens/HomeScreen.dart';
 
 class BottomNavBar extends StatefulWidget {
+  final int currentIndex;
   const BottomNavBar({
     super.key,
+    required this.currentIndex,
   });
 
   @override
@@ -21,6 +23,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   ];
   @override
   Widget build(BuildContext context) {
+    currentIndex = widget.currentIndex;
     return BottomNavigationBar(
       selectedIconTheme: IconThemeData(color: Colors.black),
       unselectedIconTheme: IconThemeData(color: Colors.red),
