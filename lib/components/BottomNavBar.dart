@@ -12,19 +12,24 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  int _currentIndex = 0;
-  String _title = 'Home';
+  int currentIndex = 0;
   final List<Widget> _children = [
     const HomeScreen(),
     const CheckoutScreen(),
-    const Placeholder(),
+    const CheckoutScreen(),
+    const CheckoutScreen(),
   ];
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       selectedIconTheme: IconThemeData(color: Colors.black),
       unselectedIconTheme: IconThemeData(color: Colors.red),
-
+      onTap: (int index) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => _children[index]));
+      },
+      currentIndex: currentIndex,
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined),
