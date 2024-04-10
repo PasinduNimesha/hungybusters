@@ -16,11 +16,12 @@ class Rating extends StatelessWidget {
           Icon(
             i < rating ? Icons.star : Icons.star_border,
             color: Colors.red,
+            size: 18,
           ),
         Text(
             '$rating',
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
             ),
         ),
       ],
