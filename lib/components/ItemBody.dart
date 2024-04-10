@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hungybusters/components/MediumButton.dart';
 import 'package:hungybusters/components/Rating.dart';
