@@ -6,28 +6,24 @@ class PaymentMethodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Column(
         children: [
           Row(
-            children: [
-              const Text('Credit Card'),
-              const Icon(Icons.credit_card),
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text('Address 1'),
+              Text('Edit'),
             ],
           ),
-          Row(
-            children: [
-              const Text('PayPal'),
-              const Icon(Icons.payment),
-            ],
-          ),
-          Row(
-            children: [
-              const Text('Cash'),
-              const Icon(Icons.money),
-            ],
-          ),
+          const SizedBox(height: 10),
+          const Text('1234 Main St, New York, NY 10001'),
         ],
-      )
+      ),
     );
   }
 }
