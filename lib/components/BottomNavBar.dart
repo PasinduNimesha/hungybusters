@@ -13,11 +13,11 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedIconTheme: const IconThemeData(color: Colors.black),
+      selectedIconTheme: const IconThemeData(color: Colors.red),
       unselectedIconTheme: const IconThemeData(color: Colors.red),
-      selectedLabelStyle: const TextStyle(color: Colors.black),
+      selectedLabelStyle: const TextStyle(color: Colors.red),
       unselectedLabelStyle: const TextStyle(color: Colors.red),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.yellow,
       currentIndex: currentIndex,
       onTap: onTap,
       items: const [
