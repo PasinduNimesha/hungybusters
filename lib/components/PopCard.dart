@@ -8,28 +8,39 @@ class PopUpCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            OrderSummary(),
-            SizedBox(height: 16),
-            TextField(
+            const OrderSummary(),
+            const SizedBox(height: 16),
+            const TextField(
               decoration: InputDecoration(
                 hintText: 'Apply Coupon Code',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 40),
-            AddressCard(),
-            SizedBox(height: 16),
-            PaymentMethodCard(),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop(); // Close the pop-up card
-              },
-              child: Text('Close'),
+            const SizedBox(height: 40),
+            const AddressCard(),
+            const SizedBox(height: 16),
+            const PaymentMethodCard(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Close the pop-up card
+                  },
+                  child: const Text('Close'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Close the pop-up card
+                  },
+                  child: const Text('Confirm'),
+                ),
+              ],
             ),
           ],
         ),

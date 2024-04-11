@@ -18,7 +18,7 @@ class AddressCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Address'),
-              Text('Edit'),
+              Text('Change', style: TextStyle(color: Colors.red)),
             ],
           ),
           SizedBox(height: 10),

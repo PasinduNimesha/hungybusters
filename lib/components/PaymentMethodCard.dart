@@ -11,17 +11,23 @@ class PaymentMethodCard extends StatelessWidget {
         border: Border.all(color: Colors.grey),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Column(
+      child: const Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text('Address 1'),
-              Text('Edit'),
+            children: [
+              Text('Payment Method'),
+              Text('Change', style: TextStyle(color: Colors.red)),
             ],
           ),
-          const SizedBox(height: 10),
-          const Text('1234 Main St, New York, NY 10001'),
+          SizedBox(height: 10),
+          Row(
+            children: [
+              Icon(Icons.credit_card),
+              SizedBox(width: 10),
+              Text('**** **** **** 1234'),
+            ],
+          ),
         ],
       ),
     );
