@@ -16,12 +16,18 @@ class AddressCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-              Text('Address 1'),
+              Text('Address'),
               Text('Edit'),
             ],
           ),
           const SizedBox(height: 10),
-          const Text('1234 Main St, New York, NY 10001'),
+          Column(
+            children: [
+              const Text('1234 Main St,'),
+              const Text('New York'),
+              const Text('United States'),
+            ],
+          ),
         ],
       ),
     );
