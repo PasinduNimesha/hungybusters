@@ -11,21 +11,23 @@ class AddressCard extends StatelessWidget {
         border: Border.all(color: Colors.grey),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Column(
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Text('Address'),
               Text('Edit'),
             ],
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('1234 Main St,'),
-              const Text('New York'),
-              const Text('United States'),
+              Text('1234 Main St,'),
+              Text('New York'),
+              Text('United States'),
             ],
           ),
         ],
