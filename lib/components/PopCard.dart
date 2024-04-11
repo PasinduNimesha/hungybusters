@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hungybusters/components/AddressCard.dart';
 import 'package:hungybusters/components/OrderSummary.dart';
+import 'package:hungybusters/components/PaymentMethodCard.dart';
 
 class PopUpCard extends StatelessWidget {
   @override
@@ -18,7 +20,10 @@ class PopUpCard extends StatelessWidget {
               border: OutlineInputBorder(),
             ),
           ),
+          SizedBox(height: 40),
+          AddressCard(),
           SizedBox(height: 16),
+          PaymentMethodCard(),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop(); // Close the pop-up card
