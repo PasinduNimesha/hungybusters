@@ -3,6 +3,8 @@ import 'package:hungybusters/components/BottomNavBar.dart';
 import 'package:hungybusters/components/CartItemCard.dart';
 import 'package:hungybusters/components/MediumButton.dart';
 
+import '../components/PopCard.dart';
+
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
 
@@ -34,7 +36,16 @@ class CheckoutScreen extends StatelessWidget {
               ),
             ),
           ),
-          MediumButton(text: "Checkout", onPressed: () {}),
+          MediumButton(
+              text: "Checkout",
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return PopUpCard(); // Show the pop-up card
+                  },
+                );
+          }),
         ],
       ),
     );
