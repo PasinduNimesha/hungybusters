@@ -12,9 +12,11 @@ class PopUpCard extends StatelessWidget {
         children: [
           OrderSummary(),
           SizedBox(height: 16),
-          Text(
-            'This is the content of the pop-up card.',
-            style: TextStyle(fontSize: 16),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Apply Coupon Code',
+              border: OutlineInputBorder(),
+            ),
           ),
           SizedBox(height: 16),
           ElevatedButton(
@@ -23,6 +25,7 @@ class PopUpCard extends StatelessWidget {
             },
             child: Text('Close'),
           ),
+          Expanded(child: Container()),
         ],
       ),
     );
