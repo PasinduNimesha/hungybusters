@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hungybusters/components/OrderSummary.dart';
 
 class PopUpCard extends StatelessWidget {
   @override
@@ -9,13 +10,7 @@ class PopUpCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            'Pop-Up Card Content',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-            ),
-          ),
+          OrderSummary(),
           SizedBox(height: 16),
           Text(
             'This is the content of the pop-up card.',
